@@ -1,12 +1,18 @@
 package com.example.demo.controller
 
+import com.example.demo.service.CreditService
+import com.example.demo.model.CreditHistoryItem
 import org.springframework.jdbc.core.JdbcTemplate
 import org.springframework.web.bind.annotation.*
 import org.springframework.jdbc.core.ConnectionCallback
+import org.springframework.http.ResponseEntity
 
 @RestController
 @RequestMapping("/credit")
-class CreditController(private val jdbcTemplate: JdbcTemplate) {
+class CreditController(
+    private val jdbcTemplate: JdbcTemplate,
+    private val creditService: CreditService
+) {
 
     @PostMapping
     fun takeCredit(@RequestParam amount: Double): Int {
@@ -23,5 +29,15 @@ class CreditController(private val jdbcTemplate: JdbcTemplate) {
         })
 
         return result ?: 1
+    }
+
+    @GetMapping
+    fun getCreditHistory(): List<CreditHistoryItem> {
+        return creditService.getCreditsHistory()
+    }
+
+    @PostMapping("/{id}/repay")
+    fun repayCredit(@PathVariable id: Int): ResponseEntity<String> {
+        return ResponseEntity.ok(creditService.repayCredit(id))
     }
 }

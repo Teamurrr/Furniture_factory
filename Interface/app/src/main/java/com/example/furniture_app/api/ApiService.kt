@@ -1,5 +1,7 @@
 package com.example.furniture_app.api
 
+import com.example.furniture_app.model.BudgetResponse
+import com.example.furniture_app.model.CreditHistoryItem
 import com.example.furniture_app.model.Employee
 import com.example.furniture_app.model.FinishedProduct
 import com.example.furniture_app.model.ProductMaterialRequirement
@@ -12,6 +14,9 @@ import retrofit2.http.*
 
 
 interface ApiService {
+
+    @GET("budget")
+    fun getBudget(): Call<BudgetResponse>
 
     @GET("rawmaterials")
     fun getRawMaterials(): Call<List<RawMaterial>>
@@ -64,6 +69,12 @@ interface ApiService {
     fun takeCredit(
         @Query("amount") amount: Double
     ): Call<Int>
+
+    @GET("credit")
+    fun getCreditHistory(): Call<List<CreditHistoryItem>>
+
+    @POST("credit/{id}/repay")
+    fun repayCredit(@Path("id") id: Int): Call<String>
 
 
 
