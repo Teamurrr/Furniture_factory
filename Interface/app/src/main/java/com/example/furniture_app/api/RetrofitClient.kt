@@ -7,7 +7,14 @@ import retrofit2.converter.scalars.ScalarsConverterFactory
 
 object RetrofitClient {
 
-    private const val BASE_URL = "http://192.168.0.101:8080/"
+    // private const val BASE_URL = "http://192.168.0.164:8080/" // lg1
+
+   // private const val BASE_URL = "http://192.168.0.101:8080/" // luntik
+
+    private const val BASE_URL = "http://10.168.198.201:8080/" // ggwp a
+
+
+
 
     val apiService: ApiService by lazy {
 

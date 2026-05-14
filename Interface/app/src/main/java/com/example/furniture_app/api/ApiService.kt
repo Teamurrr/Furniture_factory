@@ -2,6 +2,7 @@ package com.example.furniture_app.api
 
 import com.example.furniture_app.model.Employee
 import com.example.furniture_app.model.FinishedProduct
+import com.example.furniture_app.model.ProductMaterialRequirement
 import com.example.furniture_app.model.ProductProduction
 import com.example.furniture_app.model.ProductSale
 import com.example.furniture_app.model.PurchaseRequest
@@ -43,6 +44,11 @@ interface ApiService {
 
     @GET("finishedproducts")
     fun getFinishedProducts(): Call<List<FinishedProduct>>
+
+    @GET("finishedproducts/{id}/materials")
+    fun getProductMaterials(
+        @Path("id") id: Int
+    ): Call<List<ProductMaterialRequirement>>
 
 
     @POST("productsales")
