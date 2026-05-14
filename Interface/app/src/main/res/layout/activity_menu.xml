@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Furniture Factory"
+            android:textColor="@color/brand_ink"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_chip_highlight"
+            android:paddingLeft="14dp"
+            android:paddingTop="8dp"
+            android:paddingRight="14dp"
+            android:paddingBottom="8dp"
+            android:text="Furniture operations dashboard"
+            android:textColor="@color/brand_primary"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_surface_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="Control Center"
+                android:textColor="@color/brand_ink"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="Manage materials, production, sales, salaries, credits and reports from one place."
+                android:textColor="@color/brand_muted"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/rawMaterialsButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_button_primary"
+                android:text="Raw Materials"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/purchaseButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_button_secondary"
+                android:text="Purchase Raw Materials"
+                android:textAllCaps="false"
+                android:textColor="@color/brand_ink"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnProduction"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_button_secondary"
+                android:text="Production"
+                android:textAllCaps="false"
+                android:textColor="@color/brand_ink"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnOpenSale"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_button_secondary"
+                android:text="Sell Product"
+                android:textAllCaps="false"
+                android:textColor="@color/brand_ink"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnSalary"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_button_secondary"
+                android:text="Pay Salary"
+                android:textAllCaps="false"
+                android:textColor="@color/brand_ink"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnCredit"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_button_secondary"
+                android:text="Get Credit"
+                android:textAllCaps="false"
+                android:textColor="@color/brand_ink"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnReports"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_button_secondary"
+                android:text="Reports"
+                android:textAllCaps="false"
+                android:textColor="@color/brand_ink"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
